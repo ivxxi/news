@@ -35,7 +35,7 @@ As a user of the terminal application you will be able to:
 * python3.6
 * virtual environment
 * pip
-
+* flask
 
 ### Cloning
 * In your terminal:
