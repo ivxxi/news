@@ -1,4 +1,4 @@
-# News
+# News app
 
 
 ## Description
@@ -10,12 +10,9 @@ A user will have to click on `Read More` on a specific source to view artciles o
 
 ## Author
 
-
 * [**Crystal Alice**]
 
 ## Features
-
-
 As a user of the terminal application you will be able to:
 
 1. See all news sources
@@ -38,6 +35,7 @@ As a user of the terminal application you will be able to:
 * python3.6
 * virtual environment
 * pip
+
 
 ### Cloning
 * In your terminal:
