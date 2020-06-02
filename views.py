@@ -3,9 +3,28 @@ from newsapi import NewsApiClient
 from app.models import Sources
 from app.requests import get_articles, get_sources, topheadlines
 
-app = Flask(__name__)
 
+app = Flask(__name__)
 @app.route('/')
+def hello_world():
+    return render_template("login.html")
+database={'user':'password','crystal':'1234','guest':'guest'}
+
+
+@app.route('/form_login',methods=['POST','GET'])
+def login():
+    name1=request.form['username']
+    pwd=request.form['password']
+    if name1 not in database:
+	    return render_template('login.html',info='Invalid User')
+    else:
+        if database[name1]!=pwd:
+            return render_template('login.html',info='Invalid Password')
+        else:
+	         return render_template('home.html',name=name1)
+
+
+@app.route('/index')
 def index():
     '''
     View root page function that returns the index page and its data
